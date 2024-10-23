@@ -1,0 +1,155 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pacifico', cursive;
+    background-color: #FFC5C5; /* Light pink background */
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    /* Tablets */
+    #about {
+        padding: 1em;
+    }
+    
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-image, .about-content {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .about-image img {
+        height: 200px; /* Smaller image height */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile Phones */
+    #about {
+        padding: 0.5em;
+    }
+    
+    .about-image img {
+        height: 150px; /* Even smaller image height */
+    }
+    
+    #our-story, #why-love-in-bloom, #what-to-expect, #thank-you {
+        padding: 0.5em;
+        margin: 5px;
+    }
+    
+    footer {
+        padding: 5px;
+    }
+}
+
+/* About Page Styles */
+
+#about {
+    padding: 2em;
+    background-color: #f5a7d7; /* Light pink background */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px; /* Margin around section */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Larger font size for heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-image {
+    width: 50%;
+    margin: 10px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 300px; /* Fixed height for image */
+    object-fit: cover; /* Cover for image fitting */
+    border-radius: 10px; /* Rounded corners for image */
+}
+
+.about-content {
+    width: 50%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffe0f0; /* Soft peach background */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#about-content {
+    padding: 2em;
+    background-color: #c9e4ca; /* Pale green background */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px; /* Margin around section */
+}
+
+#our-story, #why-love-in-bloom, #what-to-expect, #thank-you {
+    padding: 1em;
+    background-color: #ffd7be; /* Light orange background */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px; /* Margin around section */
+}
+
+#our-story h3, #why-love-in-bloom h3, #what-to-expect h3, #thank-you h3 {
+    font-size: 2rem; /* Larger font size for headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Light gray border */
+}
+
+ul li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+footer {
+    background-color: #62cdf7; /* Light blue background */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: #000; /* Black text */
+    text-decoration: none; /* Remove underline */
+}
+
+footer ul li a:hover {
+    color: #8686d4; /* Light purple on hover */
+}

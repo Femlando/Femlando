@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+    font-family: 'Pacifico', cursive;
+    background-color: #FFC5C5; /* Light pink background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #62cdf7; /* Light blue header */
+    padding: 0.2em;
+    text-align: center;
+    border: 1px solid rebeccapurple; /* Purple border */
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-flex;
+    margin-right: 20px;
+    background-color: #bab3b3; /* Gray background for nav items */
+    border-radius: 5px;
+    border: 1px solid skyblue; /* Light blue border */
+}
+
+nav a {
+    color: #000000; /* Black text */
+    text-decoration: none;
+    transition: 0.3s ease;
+    padding: 10px; /* Padding for better clickable area */
+}
+
+nav a:hover {
+    color: white; /* Text color on hover */
+    background-color: #8686d4; /* Light purple on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Video Background */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send video behind other content */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the area */
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+    opacity: 0; /* Start with hidden elements */
+    animation: fadeIn 3s ease-in forwards;
+}
+
+/* Animating the h1 and p separately */
+.hero-text h1 {
+    font-size: 4rem;
+    animation: slideUp 2s ease-out forwards;
+    animation-delay: 0.5s; /* Delay to create a sequence effect */
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    animation: slideUp 4s ease-out forwards;
+    animation-delay: 5s; /* Staggered delay */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Button Styling */
+.button {
+    padding: 10px 20px;
+    background-color: rgb(69, 108, 216); /* Blue background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 15px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}
+
+/* Other Section Styles */
+#reasons, #message {
+    padding: 2em;
+    border-radius: 10px; /* Rounded corners for sections */
+    margin: 20px; /* Margin around sections */
+}
+
+#reasons {
+    background-color: #f5a7d7; /* Light pink for reasons section */
+}
+
+#memories {
+    padding: 2em;
+    text-align: center;
+}
+
+.memory-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    gap: 20px; /* Space between images */
+    margin-top: 20px; /* Space above memory images */
+}
+
+.memory {
+    width: calc(33.33% - 20px); /* 3 columns layout */
+    text-align: center;
+}
+
+.memory img {
+    width: 100%; 
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Cover for image fitting */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Message Section */
+#message {
+    background-color: white; /* White background for message */
+    padding: 2em; /* Padding for message section */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #62cdf7; /* Same blue as header */
+    padding: 5px; /* Padding for footer */
+    border-radius: 5px;
+}
+
+/* Call to Action Button */
+#cta {
+    background-color: rgb(172, 137, 230); /* Light purple background */
+    padding: 10px 20px; /* Padding for better clickable area */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#cta:hover {
+    background-color: #b67fc1; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .memory {
+        width: calc(50% - 20px); /* 2 columns layout for tablets */
+    }
+
+    .hero-text h1 {
+        font-size: 3rem; /* Smaller font size for heading */
+    }
+
+    .hero-text p {
+        font-size: 1.2rem; /* Smaller font size for paragraph */
+    }
+
+    nav li {
+        margin-right: 10px; /* Reduce margin on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .memory {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; /* Even smaller font size for heading */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Smaller font size for paragraph */
+    }
+
+    nav li {
+        display: block; /* Stack navigation links */
+        margin-bottom: 10px; /* Space between navigation items */
+    }
+}
